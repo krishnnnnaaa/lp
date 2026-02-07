@@ -18,7 +18,7 @@
 }
 
 #main-hero{
-    background-image: url('/assets/hero.jpg');
+    background-image: url('./assets/hero.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,12 +35,14 @@
     z-index: 2;
 }
 #main-hero h1{
+  filter: drop-shadow(4px 4px 2px #00000040);
     font-size: 64px;
     letter-spacing: 12%;
     color: white
 }
 .highlights {
     color: #FF7300;
+    font-size: 80px;
 }
 #main-hero::before{
     content: "";
@@ -52,13 +54,13 @@
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
 }
 #main-hero #hero-cta{
-    margin-top: 144px;
+    margin-top: 120px;
     margin-bottom: 94px;
 }
 #main-hero #hero-cta button{
     font-size: 40px;
     color: white;
-    /* padding: 5px 40px; */
+    padding: 10px 40px;
     width: 400px;
     border-radius: 50px;
     border: none;
@@ -79,6 +81,7 @@
 }
 .problems-section{
     display: flex;
+    background: #FEF4ED;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
@@ -93,7 +96,10 @@
     margin: 70px;
 }
 
+.problem-highlight{
+  color: #5B1B0D;
 
+}
 
 #problems-section-cards, .solution-cards, .icon-cards{
     margin: 50px 0;
@@ -108,6 +114,7 @@
 .problems-section-card, .solutions-section-card{
     box-shadow: 0px 4px 4px 0px #00000040;
     width: 552px;
+        background: #fff;
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 30px;
@@ -125,9 +132,12 @@
     font-size: 32px;
     letter-spacing: 8%;
     text-align: center;
+    color: #5B1B0D;
+    font-weight: 700;
 }
 
 .features-section{
+  background-color: #FEF4ED;
     padding-top: 100px;
 }
 
@@ -195,6 +205,7 @@ margin-bottom: 20px;
     height: 520px;
     padding: 0 20px;
     border-radius: 20px;
+    box-shadow: 0px 4px 20px 0px #00000040;
     background: #FBF9F6;
 }
 .icon-card img {
@@ -203,6 +214,7 @@ margin-bottom: 20px;
     height: 300px;
 }
 .icon-card p {
+  font-weight: 700;
     margin-top: 20px;
     font-size: 40px;
     color: #5B1B0D;
@@ -220,10 +232,10 @@ margin-bottom: 20px;
 
 /* Section title */
 .section-title {
-  font-size: 40px;
+  font-size: 64px;
   font-weight: bold;
   color: #B60B07;
-  margin-bottom: 48px;
+  margin-bottom: 100px;
   position: relative;
 }
 
@@ -287,8 +299,10 @@ margin-bottom: 20px;
   color: #fff;
   border: none;
   border-radius: 999px;
-  padding: 16px 48px;
-  font-size: 20px;
+  padding: 16px 64px;
+  font-weight: 700;
+  font-size: 40px;
+  margin: 100px;
   cursor: pointer;
 }
 
@@ -317,7 +331,7 @@ margin-bottom: 20px;
 .flow-title::before{
   content: "FLOW";
   position: absolute;
-  top: -90px;
+  top: -130px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 200px;
@@ -377,7 +391,7 @@ margin-bottom: 20px;
   display: flex;
   color: #E33E17;
   align-items: center;
-    top: -180px;
+    top: -200px;
     left: 20px;
   }
 .step-number {
@@ -465,7 +479,7 @@ margin-bottom: 20px;
 .case-container{
   width: 1585px;
   margin: auto;
-  background:#f4ebe5;
+  background: #FEF4ED;
   border-radius:16px;
   padding:40px 30px;
 }
@@ -528,6 +542,7 @@ margin-bottom: 20px;
     flex-direction: column;
     padding: 16px 20px;
     font-size: 36px;
+    font-weight: 500;
     line-height: 60px;
     width: fit-content;
     margin: auto;
@@ -572,7 +587,6 @@ margin-bottom: 20px;
 }
 
 .faq-container{
-  max-width: 900px;
   margin: auto;
   text-align:center;
       width: auto;
@@ -617,9 +631,18 @@ box-shadow: 0px 4px 4px 0px #00000040;
 
 .faq-row{
   display:flex;
-  align-items:flex-start;
+  /* align-items: center; */
   gap:16px;
   margin-bottom:10px;
+}
+.question-row{
+  align-items: center;
+}
+.answer-row{
+  align-items: flex-start;
+}
+.a{
+      margin-right: 14px;
 }
 
 .faq-label{
@@ -630,7 +653,7 @@ box-shadow: 0px 4px 4px 0px #00000040;
 }
 
 .faq-separator{
-  height: 60px;
+  height: 80px;
     width: 4px;
     background: #ff2b00;
 }
@@ -676,12 +699,13 @@ box-shadow: 0px 4px 4px 0px #00000040;
 /* big faded background text */
 .contact-bg-text{
     position: absolute;
-    top: -250px;
+    top: -210px;
     left: 30%;
     transform: translateX(-50%);
     font-size: 260px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    opacity: 30%;
     pointer-events: none;
 }
 
@@ -726,6 +750,8 @@ box-shadow: 0px 4px 4px 0px #00000040;
   cursor:pointer;
 }
 
+
+
 @media(max-width: 400px) {
      #hero-cta {
         flex-direction: column !important;
@@ -740,6 +766,21 @@ box-shadow: 0px 4px 4px 0px #00000040;
     }
         .case-container {
         width: 85% !important;
+    }
+}
+
+@media (max-width: 500px) {
+  .reasons-cta button {
+    padding: 5px 45px;
+    font-weight: 700;
+    font-size: 35px;
+    margin: 0;
+}
+.case-container {
+        width: 80% !important;
+    }
+    .contact-bg-text {
+        font-size: 80px !important;
     }
 }
 
@@ -999,8 +1040,15 @@ box-shadow: 0px 4px 4px 0px #00000040;
   .faq-item{
     width: 100%;
   }
+  .a{
+    margin-right: 3px;
+  }
   .case-section{
       padding: 40px 20px;
+}
+.highlights {
+    color: #FF7300;
+    font-size: 30px;
 }
 .case-container{
   width: 90%;
@@ -1134,7 +1182,7 @@ box-shadow: 0px 4px 4px 0px #00000040;
     font-size: 22px;
   }
   .faq-item {
-    width: auto;
+    width: 80%;
   }
   .features-section .arrow{
     width: 90%;
@@ -1157,7 +1205,7 @@ box-shadow: 0px 4px 4px 0px #00000040;
     margin-left: 0;
 }
 .faq-separator{
-  height: 90px;
+  height: 70px;
 }
 .contact-bg-text{
   left: 50%
